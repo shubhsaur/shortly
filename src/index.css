@@ -7,6 +7,7 @@
 @layer base {
 	:root {
 		--primaryCyan: 180deg 66% 49%;
+		--primaryCyanalpha: 180deg 66% 49%;
 		--primaryViolet: 257deg 27% 26%;
 
 		--secRed: 0deg 87% 67%;
@@ -26,6 +27,22 @@
     body{
         font-family: 'Poppins', sans-serif;
     }
+
+	a{
+		@apply  md:hover:text-primaryCyan;
+	}
+
+	button{
+		@apply  md:hover:bg-primaryCyanalpha transition-all duration-100;
+	}
+
+	.social svg {
+		@apply md:cursor-pointer;
+	}
+
+	.social svg path{
+		@apply md:cursor-pointer md:hover:fill-primaryCyan !important;
+	}
 }
 
 .menu svg {
@@ -33,9 +50,21 @@
 	height: 30px;
 }
 
+.error{
+	border: 2px solid red;
+}
+
+
 @media screen and (min-width: 300px) and (max-width: 767px) {
 	.shortly-bg{
 		background-image: url('images/bg-shorten-mobile.svg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-color: hsl(257, 27%, 26%);
+	}
+
+	.boost-bg{
+		background-image: url('images/bg-boost-mobile.svg');
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-color: hsl(257, 27%, 26%);
@@ -45,6 +74,13 @@
 @media screen and (min-width: 768px) {
 	.shortly-bg{
 		background-image: url('images/bg-shorten-desktop.svg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-color: hsl(257, 27%, 26%);
+	}
+
+	.boost-bg{
+		background-image: url('images/bg-boost-desktop.svg');
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-color: hsl(257, 27%, 26%);

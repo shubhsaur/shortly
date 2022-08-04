@@ -15,7 +15,9 @@ const Navbar = () => {
 
 			<nav
 				className={
-					isOpen ? "flex absolute top-[80px] right-[50px] bg-primaryViolet w-[300px] h-[400px] rounded-lg z-999" : "hidden md:flex flex-row justify-between items-center w-full"
+					isOpen
+						? "flex absolute top-[80px] right-[50px] bg-primaryViolet w-[300px] h-[400px] rounded-lg z-999"
+						: "hidden md:flex flex-row justify-between items-center w-full"
 				}
 			>
 				<div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 w-full text-[#fff] md:text-neutralGrayishViolet text-lg">
@@ -37,9 +39,10 @@ const Navbar = () => {
 						<li>
 							<a href="#">Log in</a>
 						</li>
-						<li className="bg-primaryCyan py-2 px-8 rounded-lg md:text-[#fff]">
-							<a href="#">Sign up</a>
-						</li>
+
+						<button className="bg-primaryCyan py-2 px-8 rounded-lg md:text-[#fff] text-[1.2rem] font-medium">
+							Sign up
+						</button>
 					</ul>
 				</div>
 			</nav>

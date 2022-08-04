@@ -6,6 +6,7 @@ module.exports = {
 		colors: {
 			primaryCyan: "hsl(var(--primaryCyan))",
 			primaryViolet: "hsl(var(--primaryViolet))",
+			primaryCyanalpha: "hsl(var(--primaryCyan) / 0.7)",
 			secRed: "hsl(var(--secRed))",
 			neutralGray: "hsl(var(--neutralGray))",
 			neutralGrayishViolet: "hsl(var(--neutralGrayishViolet))",
