@@ -1,8 +1,10 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import axios from "axios";
 import { v4 as uuid } from "uuid";
+import { Link } from "react-scroll";
 
-const Shorten = () => {
+
+const Shorten = forwardRef((props, ref) => {
 	const [input, setInput] = React.useState("");
 	const [data, setData] = React.useState([]);
 	const [selectId, setSelectId] = React.useState("");
@@ -42,6 +44,7 @@ const Shorten = () => {
 				<div className="flex flex-col md:flex-row md:gap-8 md:px-16 justify-center md:items-baseline items-center mt-8 pb-8">
 					<div className="flex flex-col w-full items-center">
 						<input
+							ref={ref}
 							className={isValid ? "p-4 rounded-md w-[90%] md:w-full" : "p-4 rounded-md w-[90%] md:w-full error"}
 							type="text"
 							value={input}
@@ -85,6 +88,6 @@ const Shorten = () => {
 			)}
 		</div>
 	);
-};
+});
 
 export default Shorten;
